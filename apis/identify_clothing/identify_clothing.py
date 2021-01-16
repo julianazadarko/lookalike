@@ -23,16 +23,19 @@ def run(request):
 
 def identify_clothing(img):
     # Instantiates a client
+    url = "https://images.unsplash.com/reserve/Af0sF2OS5S5gatqrKzVP_Silhoutte.jpg?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8cGljfGVufDB8fDB8&ixlib=rb-1.2.1&w=1000&q=80"
     client = vision.ImageAnnotatorClient()
 
     # The name of the image file to annotate
-    file_name = os.path.abspath('../outfit_photos/my_test.jpg')
+    #file_name = os.path.abspath('../outfit_photos/my_test.jpg')
 
     # Loads the image into memory
-    with io.open(file_name, 'rb') as image_file:
-        content = image_file.read()
+    #with io.open(file_name, 'rb') as image_file:
+    #    content = image_file.read()
+    image = vision.Image()
+    image.source.image_uri = url
 
-    image = vision.Image(content=content)
+    #image = vision.Image(content=content)
 
     # Performs label detection on the image file
     response = client.label_detection(image=image)
