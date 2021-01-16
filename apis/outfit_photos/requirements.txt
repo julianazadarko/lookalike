@@ -1,4 +1,2 @@
 sendgrid==6.5.0
 flask==1.1.2
-pillow==8.1.0
-urllib2==1.26.2
