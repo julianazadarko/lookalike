@@ -1,8 +1,8 @@
 from flask import Flask, request
-import outfit_photos
+import main
 
 app = Flask(__name__)
 
 @app.route('/', methods=['POST'])
 def wrapper():
-    return outfit_photos.run(request)
+    return main.run(request)

@@ -1,8 +1,8 @@
 from flask import Flask, request
-import find_content
+import main
 
 app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def wrapper():
-    return find_content.run(request)
+    return main.run(request)

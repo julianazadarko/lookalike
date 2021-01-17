@@ -37,8 +37,8 @@ def send_email(email):
     from_email = Email("htn.lookalike@gmail.com")  # Change to your verified sender
     to_email = To(email)  # Change to your recipient
     subject = "Sending with SendGrid is Fun"
-    image_str = "data:image/jpeg;base64,{}".format(photo_string)
-    print(image_str)
+    #image_str = "data:image/jpeg;base64,{}".format(photo_string)
+    #print(image_str)
     content= "<html><body><img src=\""+url+"\"></body></html>"
     #content = "<html><body><img src=\""+image_str+"\">test</body></html>"
     #content = Content("text/plain", "and easy to do anywhere, even with Python")

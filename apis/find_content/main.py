@@ -1,4 +1,8 @@
 from googlesearch import search 
+from bs4 import BeautifulSoup as BSHTML
+import urllib.request
+#from bs4 import BeautifulSoup
+#import requests
 
 def run(request):
     request_json = request.get_json()
@@ -30,5 +34,28 @@ def find_page(name, context="instagram"):
         print(j) 
 
     print(ig_pg)
+
+
+    page = urllib.request.urlopen(ig_pg)
+    soup = BSHTML(page)
+    images = soup.findAll('img')
+    for image in images:
+        #print image source
+        print(image['src'])
+        #print alternate text
+        print(image['alt'])
+
+    """
+
+    res = requests.get(ig_pg)
+    html_page = res.content
+    soup = BeautifulSoup(html_page, 'html.parser')
+    print(soup.prettify())
+    img_tags = soup.find_all('img')
+    urls = [img['src'] for img in img_tags]
+    print(img_tags)
+    print(urls)
+    """
+
     return "success"
     
