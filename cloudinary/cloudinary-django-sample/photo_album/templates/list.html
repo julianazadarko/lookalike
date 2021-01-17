@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load cloudinary %}
+
+{% block body %}
+  
+
+  <h1>Your Closet</h1>
+  <div class="photos">
+    <p>
+      <a class="upload_link" href="{% url 'photo_album.views.upload' %}">Upload Images...</a>
+    </p>
+    {% if not photos.exists %}
+      <p>No images were uploaded yet.</p>
+    {% endif %}
+    {% for photo in photos %}
+    <div class="hrow">
+      <div class="photo">
+          <a href="{{ photo.image.url }}" target="_blank" class="public_id_link">
+            <div class='public_id'></div>
+            {# Renders an IMG tag for a CloudinaryImage objects. #}
+            {# THUMBNAIL defined in context_processors #}
+            {% cloudinary photo.image THUMBNAIL %}
+          </a>
+      </div>
+      </div>
+    {% endfor %}
+    </div>
+{% endblock %}
+{% block javascript %}
+  $(function () {
+    $('.toggle_info').click(function () {
+      $(this).closest('.photo').toggleClass('show_more_info');
+      return false;
+    });
+  });
+{% endblock %}
