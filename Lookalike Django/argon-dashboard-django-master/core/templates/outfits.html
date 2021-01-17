@@ -40,7 +40,7 @@
                       <span class="h2 font-weight-bold mb-0">2,356</span>
                     </div>
                     <div class="col-auto">
-                      <div class="icon icon-shape bg-warning text-white rounded-circle shadow">
+                      <div class="icon icon-shape bg-dark text-white rounded-circle shadow">
                         <i class="fas fa-chart-pie"></i>
                       </div>
                     </div>
@@ -57,12 +57,12 @@
                 <div class="card-body">
                   <div class="row">
                     <div class="col">
-                      <h5 class="card-title text-uppercase text-muted mb-0">Sales</h5>
+                      <h5 class="card-title text-uppercase text-muted mb-0">New Closet Items</h5>
                       <span class="h2 font-weight-bold mb-0">924</span>
                     </div>
                     <div class="col-auto">
                       <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
-                        <i class="fas fa-users"></i>
+                        <i class="fas fa-tshirt"></i>
                       </div>
                     </div>
                   </div>
@@ -100,18 +100,43 @@
     </div>
 
     <div class="container-fluid mt--7">
-
+    
       <div class="row">
         <div class="col">
-          <div class="card shadow border-0">
-            <div id="map-canvas" class="map-canvas" data-lat="40.748817" data-lng="-73.985428" style="height: 600px;"></div>
+          <div class="card shadow">
+            <div class="card-header bg-transparent">
+              <h3 class="mb-0">Outfit of the Day</h3>
+            </div>
           </div>
         </div>
       </div>
-
+      <br>
+      <div class="row">
+        <div class="col">
+          <div class="card shadow">
+            <div class="card-header bg-transparent">
+              <h3 class="mb-0">Your Previous Outfit of the Day</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br> 
+      <div class="row">
+        <div class="col">
+          <div class="card shadow">
+            <div class="card-header bg-transparent">
+              <h3 class="mb-0">Your Previous Outfits Created By You </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    
       {% include "includes/footer.html" %}
 
     </div>
+
+    
 
 {% endblock content %}
 
