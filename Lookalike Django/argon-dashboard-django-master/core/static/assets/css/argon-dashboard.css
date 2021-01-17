@@ -17,7 +17,7 @@
 */
 :root {
   --blue: #5e72e4;
-  --indigo: #5603ad;
+  --indigo: #1A535C;
   --purple: #8965e0;
   --pink: #f3a4b5;
   --red: #f5365c;
@@ -13469,7 +13469,7 @@ button.bg-lighter:focus {
 }
 
 .bg-gradient-primary {
-  background: linear-gradient(87deg, #5e72e4 0, #825ee4 100%) !important;
+  background: linear-gradient(87deg, #1A535C 0, #4ECDC4 100%) !important;
 }
 
 .bg-gradient-secondary {
@@ -13501,7 +13501,7 @@ button.bg-lighter:focus {
 }
 
 .bg-gradient-default {
-  background: linear-gradient(87deg, #172b4d 0, #1a174d 100%) !important;
+  background: linear-gradient(87deg, #1A535C 0, #4ECDC4 100%) !important;
 }
 
 .bg-gradient-white {
@@ -13764,7 +13764,7 @@ button.section-darker:focus {
 }
 
 .bg-gradient-primary {
-  background: linear-gradient(87deg, #5e72e4 0, #825ee4 100%) !important;
+  background: linear-gradient(87deg, #1A535C 0, #4ECDC4 100%) !important;
 }
 
 .bg-gradient-secondary {
@@ -13796,7 +13796,7 @@ button.section-darker:focus {
 }
 
 .bg-gradient-default {
-  background: linear-gradient(87deg, #172b4d 0, #1a174d 100%) !important;
+  background: linear-gradient(87deg, #1A535C 0, #4ECDC4 100%) !important;
 }
 
 .bg-gradient-white {

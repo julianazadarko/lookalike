@@ -8,6 +8,9 @@ import os
 from decouple import config
 from unipath import Path
 import dj_database_url
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR    = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -31,7 +34,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'app'  # Enable the inner app 
+    'app.apps.UsersConfig',
+    'crispy_forms',
+    #'app',  # Enable the inner app 
+    'cloudinary',
 ]
 
 MIDDLEWARE = [
@@ -120,9 +126,19 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'core/static'),
+)
+
+cloudinary.config(
+  cloud_name = "dopp3iirv",
+  api_key = "138722252764125",
+  api_secret = "7TzlnM4wACFG_fwKxAPqNvHKU4M",
+  secure = True
 )
 #############################################################
 #############################################################
